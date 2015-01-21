@@ -17,6 +17,7 @@
     NSValue * smallValue;
     NSValue * bigValue;
     BOOL go;
+    CALayer * l;
 }
 
 // IBOutletUILabel *captureLabe是自己建立的storyBoard中的Label用于显示获取到的二维码的信息的连线
@@ -33,19 +34,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    time = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(baseAnimation) userInfo:nil repeats:YES];
+//    time = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(baseAnimation) userInfo:nil repeats:YES];
+    CGFloat mainwidth = [UIScreen mainScreen].bounds.size.width;
+    smallValue = [NSValue valueWithCGRect:CGRectMake(mainwidth/2-80, 200, 160, 160)];
+    bigValue = [NSValue valueWithCGRect:CGRectMake(mainwidth/2-120, 220, 240, 120)];
     
-    img = [[UIImageView alloc]init];
+    img = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 160, 160)];
     img.backgroundColor = [UIColor clearColor];
     CALayer * layer = [img layer];
     layer.borderWidth = 1.0f;
     layer.borderColor = [[UIColor whiteColor]CGColor];
     [self.view addSubview:img];
+    img.layer.position = CGPointMake(self.view.center.x, self.view.center.y);
     
-    CGFloat mainwidth = [UIScreen mainScreen].bounds.size.width;
-    smallValue = [NSValue valueWithCGRect:CGRectMake(mainwidth/2-80, 200, 160, 160)];
-    bigValue = [NSValue valueWithCGRect:CGRectMake(mainwidth/2-120, 220, 240, 120)];
+//    smallValue = [NSValue valueWithCGPoint:CGPointMake(1, 1)];
+//    bigValue = [NSValue valueWithCGPoint:CGPointMake(2, 0.5)];
     
+    go = YES;
+    [self ActionAnimation];
+
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -55,13 +62,14 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-    [time setFireDate:[NSDate date]];
+//    [time setFireDate:[NSDate date]];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
-    [time setFireDate:[NSDate distantFuture]];
+//    [time setFireDate:[NSDate distantFuture]];
 }
 
+/*
 -(void)baseAnimation {
     POPBasicAnimation * basicanimation = [POPBasicAnimation animationWithPropertyNamed:kPOPViewFrame];
     basicanimation.duration = 1.1f;
@@ -73,6 +81,25 @@
         basicanimation.toValue = smallValue;
     }
     [img pop_addAnimation:basicanimation forKey:@"go"];
+}
+ */
+
+-(void)ActionAnimation {
+    POPBasicAnimation * anim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewFrame];
+    anim.duration = 0.7f;
+    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    if (go) {
+        anim.toValue = bigValue;
+    }else {
+        anim.toValue = smallValue;
+    }
+    go = !go;
+    anim.completionBlock = ^(POPAnimation * anim,BOOL finished) {
+        if (finished) {
+            [self ActionAnimation];   //使用回调反复调用自身，而不需要额外使用计时器类。
+        }
+    };
+    [img pop_addAnimation:anim forKey:@"go"];
 }
 
 #pragma mark - 读取二维码
