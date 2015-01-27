@@ -62,6 +62,7 @@
 		EF51EC3F1A60FDC2008DDB35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF51EC3E1A60FDC2008DDB35 /* Images.xcassets */; };
 		EF51EC421A60FDC2008DDB35 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF51EC401A60FDC2008DDB35 /* LaunchScreen.xib */; };
 		EF51EC4E1A60FDC2008DDB35 /* winterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF51EC4D1A60FDC2008DDB35 /* winterTests.m */; };
+		EF961A8B1A763BBE0064271F /* SaKuraScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF961A8A1A763BBE0064271F /* SaKuraScrollView.m */; };
 		EFDFFE601A6DFE500099E5C5 /* kuang.png in Resources */ = {isa = PBXBuildFile; fileRef = EFDFFE5F1A6DFE500099E5C5 /* kuang.png */; };
 		EFDFFE631A6E471B0099E5C5 /* tableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDFFE621A6E471B0099E5C5 /* tableViewController.m */; };
 /* End PBXBuildFile section */
@@ -143,6 +144,8 @@
 		EF51EC471A60FDC2008DDB35 /* winterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = winterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF51EC4C1A60FDC2008DDB35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF51EC4D1A60FDC2008DDB35 /* winterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = winterTests.m; sourceTree = "<group>"; };
+		EF961A891A763BBE0064271F /* SaKuraScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaKuraScrollView.h; sourceTree = "<group>"; };
+		EF961A8A1A763BBE0064271F /* SaKuraScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaKuraScrollView.m; sourceTree = "<group>"; };
 		EFDFFE5F1A6DFE500099E5C5 /* kuang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kuang.png; sourceTree = "<group>"; };
 		EFDFFE611A6E471B0099E5C5 /* tableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tableViewController.h; sourceTree = "<group>"; };
 		EFDFFE621A6E471B0099E5C5 /* tableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tableViewController.m; sourceTree = "<group>"; };
@@ -424,6 +427,8 @@
 				EF4F784D1A6CF69500390C8A /* XYZTabBarViewController.m */,
 				EF4F78511A6CF71400390C8A /* ScrollViewViewController.h */,
 				EF4F78521A6CF71400390C8A /* ScrollViewViewController.m */,
+				EF961A891A763BBE0064271F /* SaKuraScrollView.h */,
+				EF961A8A1A763BBE0064271F /* SaKuraScrollView.m */,
 				EF51EC3B1A60FDC2008DDB35 /* Main.storyboard */,
 				EFDFFE611A6E471B0099E5C5 /* tableViewController.h */,
 				EFDFFE621A6E471B0099E5C5 /* tableViewController.m */,
@@ -649,6 +654,7 @@
 				EF51EC3A1A60FDC2008DDB35 /* ViewController.m in Sources */,
 				EF51EC371A60FDC2008DDB35 /* AppDelegate.m in Sources */,
 				EF4F78531A6CF71400390C8A /* ScrollViewViewController.m in Sources */,
+				EF961A8B1A763BBE0064271F /* SaKuraScrollView.m in Sources */,
 				EFDFFE631A6E471B0099E5C5 /* tableViewController.m in Sources */,
 				EF4F784F1A6CF69500390C8A /* XYZTabBarViewController.m in Sources */,
 				EF0584B21A70831C00AB65A9 /* textViewController.m in Sources */,

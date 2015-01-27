@@ -18,7 +18,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *image;
 @property (strong, nonatomic) IBOutlet UIPageControl *PageControlView;
 @property (weak, nonatomic) IBOutlet UIScrollView *myscroll;
-@property (nonatomic, strong)NSArray *imgarr;
+@property (nonatomic, strong) NSArray *imgarr;
 @end
 #define IOS_SCREEN_HEIGHT [UIScreen mainScreen ].bounds.size.height//实际的屏幕高度
 
@@ -39,7 +39,6 @@
     NSLog(@"%f",IOS_SCREEN_WIDTH);
     for (int i = 0; i<_imgarr.count; i++) {
         UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(IOS_SCREEN_WIDTH*i, 0, IOS_SCREEN_WIDTH, 200)];
-        
         img.image = [UIImage imageNamed:_imgarr[i]];
         
         [_myscroll addSubview:img];
