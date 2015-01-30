@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SaKuraScrollView : UIScrollView
+@protocol SaKuraScrollViewDelegate <NSObject>
 
+-(void)selectPageAtScrollView:(UIScrollView *)SaKuraScrollView selectPage:(NSInteger )selectPage;
+
+@end
+
+@interface SaKuraScrollView : UIView
 
 @property (nonatomic,strong) NSMutableArray *imagesMutableArray;
+@property (nonatomic, weak) id <SaKuraScrollViewDelegate> sakuraDelegate;
 
 @end

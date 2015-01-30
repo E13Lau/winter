@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		781A51E62B6693B96570A9EF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47951B513D03D3984D81B4EE /* libPods.a */; };
 		EF0584B21A70831C00AB65A9 /* textViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0584B11A70831C00AB65A9 /* textViewController.m */; };
+		EF2FCC0A1A7B1ED800FD869A /* ZZZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2FCC091A7B1ED800FD869A /* ZZZViewController.m */; };
 		EF4836C81A739E7A0095BE79 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = EF48368D1A739E7A0095BE79 /* Contents.json */; };
 		EF4836C91A739E7A0095BE79 /* fooder_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = EF48368E1A739E7A0095BE79 /* fooder_bg.png */; };
 		EF4836CA1A739E7A0095BE79 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = EF4836901A739E7A0095BE79 /* Contents.json */; };
@@ -83,6 +84,8 @@
 		E3378312CB61FE75F8410BC3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF0584B01A70831C00AB65A9 /* textViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textViewController.h; sourceTree = "<group>"; };
 		EF0584B11A70831C00AB65A9 /* textViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = textViewController.m; sourceTree = "<group>"; };
+		EF2FCC081A7B1ED800FD869A /* ZZZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZZViewController.h; sourceTree = "<group>"; };
+		EF2FCC091A7B1ED800FD869A /* ZZZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZZViewController.m; sourceTree = "<group>"; };
 		EF48368D1A739E7A0095BE79 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		EF48368E1A739E7A0095BE79 /* fooder_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fooder_bg.png; sourceTree = "<group>"; };
 		EF4836901A739E7A0095BE79 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
@@ -430,6 +433,8 @@
 				EF961A891A763BBE0064271F /* SaKuraScrollView.h */,
 				EF961A8A1A763BBE0064271F /* SaKuraScrollView.m */,
 				EF51EC3B1A60FDC2008DDB35 /* Main.storyboard */,
+				EF2FCC081A7B1ED800FD869A /* ZZZViewController.h */,
+				EF2FCC091A7B1ED800FD869A /* ZZZViewController.m */,
 				EFDFFE611A6E471B0099E5C5 /* tableViewController.h */,
 				EFDFFE621A6E471B0099E5C5 /* tableViewController.m */,
 				EF0584B01A70831C00AB65A9 /* textViewController.h */,
@@ -653,6 +658,7 @@
 			files = (
 				EF51EC3A1A60FDC2008DDB35 /* ViewController.m in Sources */,
 				EF51EC371A60FDC2008DDB35 /* AppDelegate.m in Sources */,
+				EF2FCC0A1A7B1ED800FD869A /* ZZZViewController.m in Sources */,
 				EF4F78531A6CF71400390C8A /* ScrollViewViewController.m in Sources */,
 				EF961A8B1A763BBE0064271F /* SaKuraScrollView.m in Sources */,
 				EFDFFE631A6E471B0099E5C5 /* tableViewController.m in Sources */,
