@@ -15,7 +15,7 @@
 @property (strong, nonatomic) UIPageControl * pageControlView;
 @property (strong, nonatomic) UIScrollView * myScrollView;
 @property (strong, nonatomic) UITapGestureRecognizer * TapGestureRecognizer;
-
+@property (strong, nonatomic) NSTimer * autoScrollViewTimer;
 
 @end
 
@@ -51,6 +51,8 @@
     
     self.TapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(SingleTap:)];
     [self.myScrollView addGestureRecognizer:self.TapGestureRecognizer];
+
+    self.autoScrollViewTimer = [NSTimer scheduledTimerWithTimeInterval:1.5f target:self selector:@selector(antoRollingScrollView) userInfo:nil repeats:YES];
 }
 
 -(UIPageControl *)pageControlView {
@@ -66,6 +68,11 @@
 }
 
 -(void)setImagesMutableArray:(NSMutableArray *)imagesMutableArray {
+    //判断只有一张
+    if ([imagesMutableArray count] == 1) {
+        return;
+    }
+    
     _imagesMutableArray = imagesMutableArray;
     tempimagesMutableArray = [[NSMutableArray alloc]initWithArray:imagesMutableArray];
     
@@ -80,17 +87,20 @@
     
     self.myScrollView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     self.myScrollView.contentSize = CGSizeMake(self.frame.size.width*[tempimagesMutableArray count], self.frame.size.height);
-    [self.myScrollView setContentOffset:CGPointMake(self.myScrollView.frame.size.width, 0)];   //设置显示数组第二站图
+    [self.myScrollView setContentOffset:CGPointMake(self.myScrollView.frame.size.width, 0)];   //设置显示数组第二张图
 
+    
     for (int i = 0; i<tempimagesMutableArray.count; i++) {
         UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width*i, 0, self.frame.size.width, self.frame.size.height)];
         img.image = tempimagesMutableArray[i];
+        img.backgroundColor = [UIColor grayColor];
         [self.myScrollView addSubview:img];
     }
 }
 
 #pragma mark UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
     CGFloat nowPage = scrollView.contentOffset.x/self.frame.size.width;
     self.pageControlView.currentPage = nowPage-1;
     
@@ -105,10 +115,17 @@
     }
 }
 
-//加自动滚动,判断只有一张
+//,判断只有一张，加滑动检测
 
 -(void)SingleTap:(UITapGestureRecognizer*)recognizer {
-    [self.sakuraDelegate selectPageAtScrollView:self.myScrollView selectPage:self.pageControlView.currentPage];
+    if (recognizer == self.TapGestureRecognizer) {
+        [self.sakuraDelegate selectPageAtScrollView:self selectPage:self.pageControlView.currentPage];
+    }
+}
+
+-(void)antoRollingScrollView {
+    CGFloat oldframe = self.myScrollView.contentOffset.x;
+    [self.myScrollView setContentOffset:CGPointMake(self.myScrollView.frame.size.width+oldframe, 0) animated:YES];
 }
 
 @end

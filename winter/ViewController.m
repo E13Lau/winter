@@ -62,11 +62,9 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-//    [time setFireDate:[NSDate date]];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
-//    [time setFireDate:[NSDate distantFuture]];
 }
 
 /*

@@ -41,7 +41,6 @@
     
     self.myScrollView.imagesMutableArray = self.myMutableArray;
     self.myScrollView.sakuraDelegate = self;
-
     
     SaKuraScrollView * cvView = [[SaKuraScrollView alloc]initWithFrame:CGRectMake(0, 300, 320, 200)];
     cvView.imagesMutableArray = self.myMutableArray;
@@ -55,16 +54,18 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)selectPageAtScrollView:(UIScrollView *)SaKuraScrollView selectPage:(NSInteger)selectPage {
-    switch (selectPage) {
-        case 0:
-            NSLog(@"000");
-            break;
-        case 1:
-            NSLog(@"111");
-            break;
-        default:
-            break;
+-(void)selectPageAtScrollView:(SaKuraScrollView *)SaKuraScrollView selectPage:(NSInteger)selectPage {
+    if (SaKuraScrollView == self.myScrollView) {
+        switch (selectPage) {
+            case 0:
+                NSLog(@"000");
+                break;
+            case 1:
+                NSLog(@"111");
+                break;
+            default:
+                break;
+        }
     }
 }
 
