@@ -18,7 +18,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *image;
 @property (strong, nonatomic) IBOutlet UIPageControl *PageControlView;
 @property (weak, nonatomic) IBOutlet UIScrollView *myscroll;
-@property (nonatomic, strong) NSArray *imgarr;
+@property (nonatomic, strong) NSArray *imgarr;   //????
 @end
 #define IOS_SCREEN_HEIGHT [UIScreen mainScreen ].bounds.size.height//实际的屏幕高度
 

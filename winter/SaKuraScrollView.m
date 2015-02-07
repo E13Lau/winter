@@ -115,7 +115,7 @@
     }
 }
 
-//,判断只有一张，加滑动检测
+//,判断只有一张，加滑动检测，加自动滚动与否判断
 
 -(void)SingleTap:(UITapGestureRecognizer*)recognizer {
     if (recognizer == self.TapGestureRecognizer) {

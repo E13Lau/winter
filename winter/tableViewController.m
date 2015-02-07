@@ -14,6 +14,7 @@
 }
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
+
 @end
 
 @implementation tableViewController
@@ -38,12 +39,18 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.textLabel.text = @"AAA";
-    myAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPViewFrame];
-    myAnimation.fromValue = [NSValue valueWithCGRect:CGRectMake(30, 0,320,44)];
-    myAnimation.toValue = [NSValue valueWithCGRect:CGRectMake(0, 0,320,44)];
-    myAnimation.duration = 1.0f;
-    [cell pop_addAnimation:myAnimation forKey:@"go"];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+//    myAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPViewFrame];
+//    myAnimation.fromValue = [NSValue valueWithCGRect:CGRectMake(30, 0,320,44)];
+//    myAnimation.toValue = [NSValue valueWithCGRect:CGRectMake(0, 0,320,44)];
+//    myAnimation.duration = 1.0f;
+//    [cell pop_addAnimation:myAnimation forKey:@"go"];
+    
+    
 }
 
 /*
