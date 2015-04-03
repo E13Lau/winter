@@ -65,8 +65,11 @@
 		EF51EC421A60FDC2008DDB35 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF51EC401A60FDC2008DDB35 /* LaunchScreen.xib */; };
 		EF51EC4E1A60FDC2008DDB35 /* winterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF51EC4D1A60FDC2008DDB35 /* winterTests.m */; };
 		EF961A8B1A763BBE0064271F /* SaKuraScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF961A8A1A763BBE0064271F /* SaKuraScrollView.m */; };
+		EFC55DB81ABFB3DF009596DC /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC55DB71ABFB3DF009596DC /* LocationViewController.m */; };
+		EFC55DBA1ABFE7F5009596DC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC55DB91ABFE7F5009596DC /* CoreLocation.framework */; };
 		EFDFFE601A6DFE500099E5C5 /* kuang.png in Resources */ = {isa = PBXBuildFile; fileRef = EFDFFE5F1A6DFE500099E5C5 /* kuang.png */; };
 		EFDFFE631A6E471B0099E5C5 /* tableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDFFE621A6E471B0099E5C5 /* tableViewController.m */; };
+		EFEF591A1AC2BDAA00490480 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEF59191AC2BDAA00490480 /* MapViewController.m */; };
 		EFF60ACF1A836960002C9D7E /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF60ACE1A836960002C9D7E /* MZTimerLabel.m */; };
 /* End PBXBuildFile section */
 
@@ -153,9 +156,15 @@
 		EF51EC4D1A60FDC2008DDB35 /* winterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = winterTests.m; sourceTree = "<group>"; };
 		EF961A891A763BBE0064271F /* SaKuraScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaKuraScrollView.h; sourceTree = "<group>"; };
 		EF961A8A1A763BBE0064271F /* SaKuraScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaKuraScrollView.m; sourceTree = "<group>"; };
+		EFC55DB61ABFB3DF009596DC /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		EFC55DB71ABFB3DF009596DC /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		EFC55DB91ABFE7F5009596DC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EFCD55ED1AA54B85005F2303 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		EFDFFE5F1A6DFE500099E5C5 /* kuang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kuang.png; sourceTree = "<group>"; };
 		EFDFFE611A6E471B0099E5C5 /* tableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tableViewController.h; sourceTree = "<group>"; };
 		EFDFFE621A6E471B0099E5C5 /* tableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tableViewController.m; sourceTree = "<group>"; };
+		EFEF59181AC2BDAA00490480 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		EFEF59191AC2BDAA00490480 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		EFF60ACD1A836960002C9D7E /* MZTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTimerLabel.h; sourceTree = "<group>"; };
 		EFF60ACE1A836960002C9D7E /* MZTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTimerLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC55DBA1ABFE7F5009596DC /* CoreLocation.framework in Frameworks */,
 				781A51E62B6693B96570A9EF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +192,7 @@
 		9E065D2A2861290FAF78A383 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFC55DB91ABFE7F5009596DC /* CoreLocation.framework */,
 				47951B513D03D3984D81B4EE /* libPods.a */,
 			);
 			name = Frameworks;
@@ -432,6 +443,7 @@
 				EFDFFE5F1A6DFE500099E5C5 /* kuang.png */,
 				EF51EC381A60FDC2008DDB35 /* ViewController.h */,
 				EF51EC391A60FDC2008DDB35 /* ViewController.m */,
+				EFCD55ED1AA54B85005F2303 /* MyPlayground.playground */,
 				EF4F784C1A6CF69500390C8A /* XYZTabBarViewController.h */,
 				EF4F784D1A6CF69500390C8A /* XYZTabBarViewController.m */,
 				EF4F78511A6CF71400390C8A /* ScrollViewViewController.h */,
@@ -445,6 +457,10 @@
 				EFF60ACE1A836960002C9D7E /* MZTimerLabel.m */,
 				EF2FCC081A7B1ED800FD869A /* ZZZViewController.h */,
 				EF2FCC091A7B1ED800FD869A /* ZZZViewController.m */,
+				EFC55DB61ABFB3DF009596DC /* LocationViewController.h */,
+				EFC55DB71ABFB3DF009596DC /* LocationViewController.m */,
+				EFEF59181AC2BDAA00490480 /* MapViewController.h */,
+				EFEF59191AC2BDAA00490480 /* MapViewController.m */,
 				EFDFFE611A6E471B0099E5C5 /* tableViewController.h */,
 				EFDFFE621A6E471B0099E5C5 /* tableViewController.m */,
 				EF0584B01A70831C00AB65A9 /* textViewController.h */,
@@ -537,6 +553,11 @@
 				TargetAttributes = {
 					EF51EC2D1A60FDC2008DDB35 = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					EF51EC461A60FDC2008DDB35 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -669,9 +690,11 @@
 				EF51EC3A1A60FDC2008DDB35 /* ViewController.m in Sources */,
 				EF51EC371A60FDC2008DDB35 /* AppDelegate.m in Sources */,
 				EF2FCC0A1A7B1ED800FD869A /* ZZZViewController.m in Sources */,
+				EFC55DB81ABFB3DF009596DC /* LocationViewController.m in Sources */,
 				EF4F78531A6CF71400390C8A /* ScrollViewViewController.m in Sources */,
 				EFF60ACF1A836960002C9D7E /* MZTimerLabel.m in Sources */,
 				EF1BA7511A8201770032A674 /* FiveViewController.m in Sources */,
+				EFEF591A1AC2BDAA00490480 /* MapViewController.m in Sources */,
 				EF961A8B1A763BBE0064271F /* SaKuraScrollView.m in Sources */,
 				EFDFFE631A6E471B0099E5C5 /* tableViewController.m in Sources */,
 				EF4F784F1A6CF69500390C8A /* XYZTabBarViewController.m in Sources */,

@@ -65,12 +65,12 @@
         _pageControlView = pageControlView;
         return pageControlView;
     }
-}
+}    //????
 
 -(void)setImagesMutableArray:(NSMutableArray *)imagesMutableArray {
     //判断只有一张
     if ([imagesMutableArray count] == 1) {
-        return;
+        [imagesMutableArray addObject:imagesMutableArray[0]];
     }
     
     _imagesMutableArray = imagesMutableArray;
