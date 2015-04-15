@@ -96,20 +96,127 @@
         }
     }];
     [_myscroll pop_addAnimation:framePOP forKey:@"go"];
+    
 }
 
+-(void)basic{
+    
+    POPBasicAnimation* basicAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerCornerRadius];
+    
+    basicAnimation.toValue = [NSNumber numberWithFloat:CGRectGetWidth(_myscroll.frame)/2.0];
+    
+    basicAnimation.timingFunction =[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    
+    // basicAnimation.duration = 3.f;
+    
+    [basicAnimation setCompletionBlock:^(POPAnimation * ani, BOOL fin) {
+        
+        if (fin) {
+            
+            NSLog(@"view.frame = %@",NSStringFromCGRect(_myscroll.frame));
+            
+             POPBasicAnimation* newBasic = [POPBasicAnimation easeInEaseOutAnimation];
+            
+             newBasic.property = [POPAnimatableProperty propertyWithName:kPOPLayerCornerRadius];
+            
+             newBasic.toValue = [NSNumber numberWithFloat:0];
+            
+             [_myscroll.layer pop_addAnimation:newBasic forKey:@"go"];
+
+        }
+        
+    }];
+    
+    POPSpringAnimation * springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
+    springAnimation.toValue = [NSValue valueWithCGRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    springAnimation.springSpeed = 12.0f;
+    springAnimation.springBounciness = 4.0f;
+    [springAnimation setCompletionBlock:^(POPAnimation * animation, BOOL finsh) {
+        if (finsh) {
+            POPSpringAnimation * newspringAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
+            newspringAnimation.toValue = [NSValue valueWithCGRect:CGRectMake(self.view.frame.size.width/2, self.view.frame.size.height, 0, 0)];
+            newspringAnimation.springSpeed = 12.0f;
+            newspringAnimation.springBounciness = 4.0f;
+            [_myscroll pop_addAnimation:newspringAnimation forKey:@"newSpring"];
+        }
+    }];
+    
+    [_myscroll pop_addAnimation:springAnimation forKey:@"spring"];
+    [_myscroll.layer pop_addAnimation:basicAnimation forKey:@"frameChange"];
+}
 
 
 #pragma mark ViewAction
 -(IBAction)aa:(id)sender {
-    if (animationbool) {
-        NSValue * newframe = [NSValue valueWithCGRect:CGRectMake(0, 500, 0, 0)];
-        [self spring:newframe];
-        animationbool = NO;
-    }else {
-        [self spring:oldframe];
-        animationbool = YES;
-    }
+    [self basic];
+//    if (animationbool) {
+//        NSValue * newframe = [NSValue valueWithCGRect:CGRectMake(0, 500, 0, 0)];
+//        [self spring:newframe];
+//        animationbool = NO;
+//    }else {
+//        [self spring:oldframe];
+//        animationbool = YES;
+//    }
+}
+
+-(void)group
+
+{
+    
+    _myscroll.transform = CGAffineTransformMakeRotation(M_PI_2/3);
+    
+    POPBasicAnimation* spring = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    
+    spring.beginTime = CACurrentMediaTime();
+    
+    spring.duration = .4f;
+    
+    spring.fromValue = [NSNumber numberWithFloat:-100.f];
+    
+    spring.toValue = [NSNumber numberWithFloat:CGRectGetMinY(_myscroll.frame) + 80];
+    
+    [spring setCompletionBlock:^(POPAnimation * ani, BOOL fin) {
+        
+    }];
+    
+    POPBasicAnimation* basic = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerRotation];
+    
+    basic.beginTime = CACurrentMediaTime();
+    
+    basic.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    
+    basic.toValue = [NSNumber numberWithFloat:-M_PI_4];
+    
+    basic.duration = .4f;
+    
+    POPBasicAnimation* rotation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerRotation];
+    
+    rotation.beginTime = CACurrentMediaTime() + .4f;
+    
+    rotation.toValue = [NSNumber numberWithFloat:0.f];
+    
+    rotation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    
+    rotation.duration = .25f;
+    
+    POPBasicAnimation* donw = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    
+    donw.beginTime = CACurrentMediaTime() + 0.4f;
+    
+    donw.toValue = [NSNumber numberWithFloat:CGRectGetMinY(_myscroll.frame)];
+    
+    donw.duration = .25f;
+    
+    donw.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    
+    [_myscroll.layer pop_addAnimation:spring forKey:@"spring"];
+    
+    [_myscroll.layer pop_addAnimation:basic forKey:@"basic"];
+    
+    [_myscroll.layer pop_addAnimation:donw forKey:@"down"];
+    
+    [_myscroll.layer pop_addAnimation:rotation forKey:@"rotation"];
+    
 }
 
 /*

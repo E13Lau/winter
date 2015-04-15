@@ -47,6 +47,7 @@
     [self.view addSubview:img];
     img.layer.position = CGPointMake(self.view.center.x, self.view.center.y);
     
+    
 //    smallValue = [NSValue valueWithCGPoint:CGPointMake(1, 1)];
 //    bigValue = [NSValue valueWithCGPoint:CGPointMake(2, 0.5)];
     

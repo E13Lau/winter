@@ -11,6 +11,7 @@
 		EF0584B21A70831C00AB65A9 /* textViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0584B11A70831C00AB65A9 /* textViewController.m */; };
 		EF1BA7511A8201770032A674 /* FiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1BA7501A8201770032A674 /* FiveViewController.m */; };
 		EF2FCC0A1A7B1ED800FD869A /* ZZZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2FCC091A7B1ED800FD869A /* ZZZViewController.m */; };
+		EF43D1011ADB65AF00D756F4 /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = EF43D1001ADB65AF00D756F4 /* BaseService.m */; };
 		EF4836C81A739E7A0095BE79 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = EF48368D1A739E7A0095BE79 /* Contents.json */; };
 		EF4836C91A739E7A0095BE79 /* fooder_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = EF48368E1A739E7A0095BE79 /* fooder_bg.png */; };
 		EF4836CA1A739E7A0095BE79 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = EF4836901A739E7A0095BE79 /* Contents.json */; };
@@ -64,6 +65,9 @@
 		EF51EC3F1A60FDC2008DDB35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF51EC3E1A60FDC2008DDB35 /* Images.xcassets */; };
 		EF51EC421A60FDC2008DDB35 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF51EC401A60FDC2008DDB35 /* LaunchScreen.xib */; };
 		EF51EC4E1A60FDC2008DDB35 /* winterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF51EC4D1A60FDC2008DDB35 /* winterTests.m */; };
+		EF69E0071ADB5E8800E62A7E /* MyService.m in Sources */ = {isa = PBXBuildFile; fileRef = EF69E0061ADB5E8800E62A7E /* MyService.m */; };
+		EF69E00A1ADB5E9500E62A7E /* MyModal.m in Sources */ = {isa = PBXBuildFile; fileRef = EF69E0091ADB5E9500E62A7E /* MyModal.m */; };
+		EF69E00D1ADB5F5400E62A7E /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF69E00C1ADB5F5400E62A7E /* BaseModel.m */; };
 		EF961A8B1A763BBE0064271F /* SaKuraScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF961A8A1A763BBE0064271F /* SaKuraScrollView.m */; };
 		EFC55DB81ABFB3DF009596DC /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC55DB71ABFB3DF009596DC /* LocationViewController.m */; };
 		EFC55DBA1ABFE7F5009596DC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC55DB91ABFE7F5009596DC /* CoreLocation.framework */; };
@@ -93,6 +97,8 @@
 		EF1BA7501A8201770032A674 /* FiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveViewController.m; sourceTree = "<group>"; };
 		EF2FCC081A7B1ED800FD869A /* ZZZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZZViewController.h; sourceTree = "<group>"; };
 		EF2FCC091A7B1ED800FD869A /* ZZZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZZViewController.m; sourceTree = "<group>"; };
+		EF43D0FF1ADB65AF00D756F4 /* BaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseService.h; sourceTree = "<group>"; };
+		EF43D1001ADB65AF00D756F4 /* BaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseService.m; sourceTree = "<group>"; };
 		EF48368D1A739E7A0095BE79 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		EF48368E1A739E7A0095BE79 /* fooder_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fooder_bg.png; sourceTree = "<group>"; };
 		EF4836901A739E7A0095BE79 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
@@ -154,6 +160,12 @@
 		EF51EC471A60FDC2008DDB35 /* winterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = winterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF51EC4C1A60FDC2008DDB35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF51EC4D1A60FDC2008DDB35 /* winterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = winterTests.m; sourceTree = "<group>"; };
+		EF69E0051ADB5E8800E62A7E /* MyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyService.h; sourceTree = "<group>"; };
+		EF69E0061ADB5E8800E62A7E /* MyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyService.m; sourceTree = "<group>"; };
+		EF69E0081ADB5E9500E62A7E /* MyModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyModal.h; sourceTree = "<group>"; };
+		EF69E0091ADB5E9500E62A7E /* MyModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyModal.m; sourceTree = "<group>"; };
+		EF69E00B1ADB5F5400E62A7E /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		EF69E00C1ADB5F5400E62A7E /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		EF961A891A763BBE0064271F /* SaKuraScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaKuraScrollView.h; sourceTree = "<group>"; };
 		EF961A8A1A763BBE0064271F /* SaKuraScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaKuraScrollView.m; sourceTree = "<group>"; };
 		EFC55DB61ABFB3DF009596DC /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
@@ -461,6 +473,14 @@
 				EFC55DB71ABFB3DF009596DC /* LocationViewController.m */,
 				EFEF59181AC2BDAA00490480 /* MapViewController.h */,
 				EFEF59191AC2BDAA00490480 /* MapViewController.m */,
+				EF43D0FF1ADB65AF00D756F4 /* BaseService.h */,
+				EF43D1001ADB65AF00D756F4 /* BaseService.m */,
+				EF69E0051ADB5E8800E62A7E /* MyService.h */,
+				EF69E0061ADB5E8800E62A7E /* MyService.m */,
+				EF69E0081ADB5E9500E62A7E /* MyModal.h */,
+				EF69E0091ADB5E9500E62A7E /* MyModal.m */,
+				EF69E00B1ADB5F5400E62A7E /* BaseModel.h */,
+				EF69E00C1ADB5F5400E62A7E /* BaseModel.m */,
 				EFDFFE611A6E471B0099E5C5 /* tableViewController.h */,
 				EFDFFE621A6E471B0099E5C5 /* tableViewController.m */,
 				EF0584B01A70831C00AB65A9 /* textViewController.h */,
@@ -687,9 +707,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF69E00A1ADB5E9500E62A7E /* MyModal.m in Sources */,
 				EF51EC3A1A60FDC2008DDB35 /* ViewController.m in Sources */,
+				EF69E00D1ADB5F5400E62A7E /* BaseModel.m in Sources */,
 				EF51EC371A60FDC2008DDB35 /* AppDelegate.m in Sources */,
 				EF2FCC0A1A7B1ED800FD869A /* ZZZViewController.m in Sources */,
+				EF69E0071ADB5E8800E62A7E /* MyService.m in Sources */,
+				EF43D1011ADB65AF00D756F4 /* BaseService.m in Sources */,
 				EFC55DB81ABFB3DF009596DC /* LocationViewController.m in Sources */,
 				EF4F78531A6CF71400390C8A /* ScrollViewViewController.m in Sources */,
 				EFF60ACF1A836960002C9D7E /* MZTimerLabel.m in Sources */,
