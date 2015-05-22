@@ -1,24 +1,24 @@
 #winter
 ##这是一个功能测试demo
--ViewController.h 包含
- -二维码
- -POP循环动画
--ScrollViewViewController.h
- -LZPickerView使用
- -POP组合动画
--LZPickerView
- -显示PickerView的简单独立模块
--SaKuraScrollView
- -显示循环图片的ScrollView独立模块
--FiveViewController.h
- -<CoreMotion/CoreMotion.h>
- -<PureLayout.h>
--ZZZViewController.h
- -SaKuraScrollView使用
--LocationViewController.h
- -CLLocationManager使用
--MapViewController.h
- -AFNetworking
- -网络请求
--tableViewController.h
- -UITableViewCell 动画
+- ViewController.h 包含
+ - 二维码
+ - POP循环动画
+- ScrollViewViewController.h
+ - LZPickerView使用
+ - POP组合动画
+- LZPickerView
+ - 显示PickerView的简单独立模块
+- SaKuraScrollView
+ - 显示循环图片的ScrollView独立模块
+- FiveViewController.h
+ - <CoreMotion/CoreMotion.h>
+ - <PureLayout.h>
+- ZZZViewController.h
+ - SaKuraScrollView使用
+- LocationViewController.h
+ - CLLocationManager使用
+- MapViewController.h
+ - AFNetworking
+ - 网络请求
+- tableViewController.h
+ - UITableViewCell 动画
