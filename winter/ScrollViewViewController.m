@@ -8,8 +8,9 @@
 
 #import "ScrollViewViewController.h"
 #import <POP.h>
+#import "LZPickerView.h"
 
-@interface ScrollViewViewController () <UIScrollViewDelegate,UIPageViewControllerDataSource,UIPageViewControllerDelegate> {
+@interface ScrollViewViewController () <UIScrollViewDelegate,UIPageViewControllerDataSource,UIPageViewControllerDelegate,LZPicderViewDelegate> {
     NSValue * oldframe;
     BOOL animationbool;
     UITapGestureRecognizer * tapaaa;
@@ -148,7 +149,7 @@
 
 #pragma mark ViewAction
 -(IBAction)aa:(id)sender {
-    [self basic];
+//    [self basic];
 //    if (animationbool) {
 //        NSValue * newframe = [NSValue valueWithCGRect:CGRectMake(0, 500, 0, 0)];
 //        [self spring:newframe];
@@ -157,6 +158,17 @@
 //        [self spring:oldframe];
 //        animationbool = YES;
 //    }
+    
+    LZPickerView * pickerView = [[LZPickerView alloc]initWithDataType:LZPicerViewTypePicker WithMenuArray:@[@"aaa",@"BBBB"]];
+    pickerView.delegate = self;
+}
+
+-(void)lzPickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    
+}
+
+-(void)lzDatePickerViewValueChanged:(UIDatePicker *)datePickerView value:(NSDate *)date {
+    NSLog(@"%@",date);
 }
 
 -(void)group

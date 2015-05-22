@@ -8,7 +8,9 @@
 
 #import "XYZTabBarViewController.h"
 
-@interface XYZTabBarViewController ()
+@interface XYZTabBarViewController () {
+    UITabBarController * contrlller;
+}
 
 @end
 

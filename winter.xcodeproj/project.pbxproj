@@ -52,6 +52,7 @@
 		EF4836ED1A739E7A0095BE79 /* 我要运动128x128.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4836C41A739E7A0095BE79 /* 我要运动128x128.png */; };
 		EF4836EE1A739E7A0095BE79 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = EF4836C61A739E7A0095BE79 /* Contents.json */; };
 		EF4836EF1A739E7A0095BE79 /* 我要运动128x128@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF4836C71A739E7A0095BE79 /* 我要运动128x128@3x.png */; };
+		EF4907EF1B0D772F00CFAB3E /* LZPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4907EE1B0D772F00CFAB3E /* LZPickerView.m */; };
 		EF4F784F1A6CF69500390C8A /* XYZTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4F784D1A6CF69500390C8A /* XYZTabBarViewController.m */; };
 		EF4F78531A6CF71400390C8A /* ScrollViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4F78521A6CF71400390C8A /* ScrollViewViewController.m */; };
 		EF4F78581A6CF7E700390C8A /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF4F78541A6CF7E700390C8A /* 0.jpg */; };
@@ -139,6 +140,8 @@
 		EF4836C41A739E7A0095BE79 /* 我要运动128x128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我要运动128x128.png"; sourceTree = "<group>"; };
 		EF4836C61A739E7A0095BE79 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		EF4836C71A739E7A0095BE79 /* 我要运动128x128@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我要运动128x128@3x.png"; sourceTree = "<group>"; };
+		EF4907ED1B0D772F00CFAB3E /* LZPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPickerView.h; sourceTree = "<group>"; };
+		EF4907EE1B0D772F00CFAB3E /* LZPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPickerView.m; sourceTree = "<group>"; };
 		EF4F784C1A6CF69500390C8A /* XYZTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTabBarViewController.h; sourceTree = "<group>"; };
 		EF4F784D1A6CF69500390C8A /* XYZTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTabBarViewController.m; sourceTree = "<group>"; };
 		EF4F78511A6CF71400390C8A /* ScrollViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewViewController.h; sourceTree = "<group>"; };
@@ -460,6 +463,8 @@
 				EF4F784D1A6CF69500390C8A /* XYZTabBarViewController.m */,
 				EF4F78511A6CF71400390C8A /* ScrollViewViewController.h */,
 				EF4F78521A6CF71400390C8A /* ScrollViewViewController.m */,
+				EF4907ED1B0D772F00CFAB3E /* LZPickerView.h */,
+				EF4907EE1B0D772F00CFAB3E /* LZPickerView.m */,
 				EF961A891A763BBE0064271F /* SaKuraScrollView.h */,
 				EF961A8A1A763BBE0064271F /* SaKuraScrollView.m */,
 				EF51EC3B1A60FDC2008DDB35 /* Main.storyboard */,
@@ -719,6 +724,7 @@
 				EFF60ACF1A836960002C9D7E /* MZTimerLabel.m in Sources */,
 				EF1BA7511A8201770032A674 /* FiveViewController.m in Sources */,
 				EFEF591A1AC2BDAA00490480 /* MapViewController.m in Sources */,
+				EF4907EF1B0D772F00CFAB3E /* LZPickerView.m in Sources */,
 				EF961A8B1A763BBE0064271F /* SaKuraScrollView.m in Sources */,
 				EFDFFE631A6E471B0099E5C5 /* tableViewController.m in Sources */,
 				EF4F784F1A6CF69500390C8A /* XYZTabBarViewController.m in Sources */,

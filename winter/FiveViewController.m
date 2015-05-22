@@ -17,6 +17,7 @@
 #import "FiveViewController.h"
 #import <CoreMotion/CoreMotion.h>
 #import "MZTimerLabel.h"
+#import <PureLayout.h>
 
 @interface FiveViewController () {
     CGFloat xxx;
@@ -42,6 +43,8 @@
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
 
 
+@property (strong, nonatomic) IBOutlet UIView * view1;
+@property (strong, nonatomic) IBOutlet UIView * view2;
 
 @property (strong, nonatomic) IBOutlet UILabel *myLabel;
 @property (strong, nonatomic) IBOutlet UILabel *timeLabel;
@@ -97,8 +100,6 @@
                 }];
         }
     }
-    
-    
 
     self.motionManager = [CMMotionManager new];
     
@@ -112,11 +113,21 @@
 
     [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(getdeviceMotion) userInfo:nil repeats:YES];
     
+    self.view1 = [UIView newAutoLayoutView];
+    self.view1.backgroundColor = [UIColor yellowColor];
+    self.view2 = [UIView newAutoLayoutView];
     
+    [self.view1 addSubview:self.view2];
+    [self.view addSubview:self.view1];
+    
+    [self.view1 autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:10.f];
+    [self.view1 autoPinEdgeToSuperviewEdge:ALEdgeTop];
+    [self.view1 autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:10.f];
+    [self.view1 autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+    [self.view1 autoSetDimensionsToSize:CGSizeMake(100.0f, 100.0f)];
+
     // Do any additional setup after loading the view.
 }
-
-
 
 -(void)getdeviceMotion {
     tempxxx = self.motionManager.deviceMotion.userAcceleration.x;
