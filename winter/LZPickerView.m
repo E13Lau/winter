@@ -11,8 +11,10 @@
 
 
 @interface LZPickerView () <UIPickerViewDelegate,UIPickerViewDataSource>{
-//    UIDatePicker * datePickerView;
-//    UIPickerView * dataPickerView;
+    //    UIDatePicker * datePickerView;
+    //    UIPickerView * dataPickerView;
+    NSString * Identifier;
+    UIDatePickerMode datePickerMode;
 }
 
 @end
@@ -20,28 +22,36 @@
 @implementation LZPickerView
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 - (id)initWithDataType:(LZPicerViewType)dataType {
     self = [super init];
     if (self) {
         _dataType = dataType;
-        [self setup];
     }
     return self;
 }
 
-- (id)initWithDataType:(LZPicerViewType)dataType WithMenuArray:(NSArray *)menuArray {
+- (id)initWithDatePickerMode:(UIDatePickerMode)mode {
+    self = [super init];
+    if (self) {
+        datePickerMode = mode;
+        _dataType = LZPicerViewTypeDatePicker;
+    }
+    return self;
+}
+
+
+- (id)initWithMenuArray:(NSArray *)menuArray {
     self = [super init];
     if (self) {
         _menuArray = menuArray;
-        _dataType = dataType;
-        [self setup];
+        _dataType = LZPicerViewTypePicker;
     }
     return self;
 }
@@ -52,11 +62,16 @@
     }
 }
 
+- (void)setRestorationIdentifier:(NSString *)restorationIdentifier {
+    Identifier = restorationIdentifier;
+}
+
+- (void)show {
+    [self setup];
+}
+
 - (void)setup {
     //intiView
-    NSLog(@"%@",_menuArray);
-    
-    static LZPickerView * lzPickerView;
     //使用    self.alpha = 0.5f;
     //影响到子View的透明度
     self.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.0f];
@@ -78,6 +93,7 @@
     /***LZPicerViewTypeDatePicker Logic***/
     if (_dataType == LZPicerViewTypeDatePicker) {
         self.LZDatePicker = [[UIDatePicker alloc]init];
+        self.LZDatePicker.datePickerMode = datePickerMode;
         [self.LZDatePicker addTarget:self action:@selector(datePickerViewValueChanged:) forControlEvents:UIControlEventValueChanged];
         [self.LZDatePicker setAlpha:1.0f];
         [self.LZDatePicker setBackgroundColor:[UIColor whiteColor]];
@@ -85,13 +101,16 @@
         [UIView animateWithDuration:0.2f animations:^{
             self.LZDatePicker.frame = CGRectMake(0, self.frame.size.height-self.LZDatePicker.frame.size.height, self.LZDatePicker.frame.size.width, self.LZDatePicker.frame.size.height);
         }];
-//        [self.LZDatePicker autoPinEdgeToSuperviewEdge:ALEdgeLeft];
-//        [self.LZDatePicker autoPinEdgeToSuperviewEdge:ALEdgeRight];
-//        [self.LZDatePicker autoPinEdgeToSuperviewEdge:ALEdgeTop];
-//        [self.LZDatePicker autoSetDimensionsToSize:[self.LZDatePicker intrinsicContentSize]];
+        if (Identifier) {
+            self.LZDatePicker.restorationIdentifier = Identifier;
+        }
+        //        [self.LZDatePicker autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+        //        [self.LZDatePicker autoPinEdgeToSuperviewEdge:ALEdgeRight];
+        //        [self.LZDatePicker autoPinEdgeToSuperviewEdge:ALEdgeTop];
+        //        [self.LZDatePicker autoSetDimensionsToSize:[self.LZDatePicker intrinsicContentSize]];
         [self addSubview:self.LZDatePicker];
     }
-        /***LZPicerViewTypePicker Logic***/
+    /***LZPicerViewTypePicker Logic***/
     else if (_dataType == LZPicerViewTypePicker) {
         self.LZPicker = [[UIPickerView alloc]init];
         self.LZPicker.delegate = self;
@@ -100,6 +119,9 @@
         [UIView animateWithDuration:0.2f animations:^{
             self.LZPicker.frame = CGRectMake(0, self.frame.size.height-self.LZPicker.frame.size.height, self.LZPicker.frame.size.width, self.LZPicker.frame.size.height);
         }];
+        if (Identifier.length) {
+            self.LZPicker.restorationIdentifier = Identifier;
+        }
         [self addSubview:self.LZPicker];
     }
 }

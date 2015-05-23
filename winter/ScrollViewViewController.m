@@ -159,8 +159,9 @@
 //        animationbool = YES;
 //    }
     
-    LZPickerView * pickerView = [[LZPickerView alloc]initWithDataType:LZPicerViewTypePicker WithMenuArray:@[@"aaa",@"BBBB"]];
+    LZPickerView * pickerView = [[LZPickerView alloc]initWithMenuArray:@[@"aaa",@"BBBB"]];
     pickerView.delegate = self;
+    [pickerView show];
 }
 
 -(void)lzPickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {

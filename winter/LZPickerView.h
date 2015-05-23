@@ -16,7 +16,6 @@ typedef enum{
     LZPicerViewTypeDatePicker
 }LZPicerViewType;
 
-
 @class LZPickerView;
 
 @protocol LZPicderViewDelegate <NSObject>
@@ -30,11 +29,15 @@ typedef enum{
 @interface LZPickerView : UIControl
 
 //init
-- (id)initWithDataType:(LZPicerViewType)dataType;
-- (id)initWithDataType:(LZPicerViewType)dataType WithMenuArray:(NSArray *)menuArray;
-
+//- (id)initWithDataType:(LZPicerViewType)dataType;
+//- (id)initWithDataType:(LZPicerViewType)dataType WithMenuArray:(NSArray *)menuArray;
+- (id)initWithMenuArray:(NSArray *)menuArray;
+- (id)initWithDatePickerMode:(UIDatePickerMode)mode;
 //delegate
 @property (strong, nonatomic) id <LZPicderViewDelegate> delegate;
+
+//show
+- (void)show;
 
 //显示的string数组
 //数组结构可以是@[],@[@[],@[]]
@@ -48,8 +51,5 @@ typedef enum{
 
 //Picker
 @property (strong, nonatomic) UIPickerView * LZPicker;
-
-
-
 
 @end
