@@ -29,10 +29,9 @@ typedef enum{
 @interface LZPickerView : UIControl
 
 //init
-//- (id)initWithDataType:(LZPicerViewType)dataType;
-//- (id)initWithDataType:(LZPicerViewType)dataType WithMenuArray:(NSArray *)menuArray;
 - (id)initWithMenuArray:(NSArray *)menuArray;
 - (id)initWithDatePickerMode:(UIDatePickerMode)mode;
+
 //delegate
 @property (strong, nonatomic) id <LZPicderViewDelegate> delegate;
 
